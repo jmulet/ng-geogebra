@@ -1,0 +1,18 @@
+/*
+
+ng-geogebra
+GEOGEBRA FOR ANGULARJS APPLICATIONS
+J. Mulet (2015) pep.mulet@gmail.com
+*/
+/* 
+    Created on : 05/04/2015, 10:06:03
+    Author     : josep
+*/
+
+.logger {
+    background-color: purple;
+    font-family: 'monospace';
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ng-geogebra sample</title>
+        <link href="main.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-controller="ng-geogebra-sample-ctrl">
+            <h1> ng-geogebra sample </h1>                 
+            <h4>Static applets</h4><button ng-click="getPNG()">PNG64</button>
+            <div geogebra="" height='500' width="800" parameters='{"enableRightClick":true}'  ng-model="staticApplet1"></div>
+            
+            <h4>Dynamic applets <button ng-click="newApplet()">New applet</button>  </h4>
+            <table>
+                <tr style='height:300px; width:400px;' ng-repeat="applet in dynamicApplets">
+                    <td style='height:300px; width:400px;' > 
+                        <div>
+                            <span><button ng-click='removeApplet(applet)' title='remove'>x</button></span>
+                              <div geogebra="" parameters='{"showAlgebraInput":true}' ng-model="applet" width="400" height="300"></div> 
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+            
+            <div class='logger'>
+                LOGGER: 
+                <ul>
+                    <li ng-repeat="line in logger track by $index">{{line}}</li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+         <script type="text/javascript" src="js/libs/require.js/require.js" data-main="js/main.js"></script>        
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}
+${licensePrefix}ng-geogebra
+${licensePrefix}GEOGEBRA FOR ANGULARJS APPLICATIONS
+${licensePrefix}J. Mulet (2015) pep.mulet@gmail.com
+<#if licenseLast??>
+${licenseLast}
+</#if>
